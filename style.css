@@ -1,0 +1,106 @@
+/* 全局样式 */
+body {
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+    background-color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+/* 链接样式 */
+a {
+    color: #1772d0;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:focus, a:hover {
+    color: #f09228;
+    text-decoration: none;
+}
+
+/* 名字样式 */
+name {
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+}
+
+/* 标题样式 */
+heading {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 论文标题样式 */
+papertitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+}
+
+/* 图片样式 */
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+/* 文本段落样式 */
+p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* 引用样式 */
+em {
+    font-style: italic;
+}
+
+/* 响应式设计 */
+@media only screen and (max-width: 800px) {
+    body {
+        font-size: 14px;
+    }
+    
+    name {
+        font-size: 28px;
+    }
+    
+    heading {
+        font-size: 20px;
+    }
+    
+    papertitle {
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    name {
+        font-size: 24px;
+    }
+    
+    heading {
+        font-size: 18px;
+    }
+    
+    papertitle {
+        font-size: 15px;
+    }
+} 

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Papersenses Project</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+            background-color: white;
+            z-index: 10;
+            position: relative;
+        }
+        
+        .back-button {
+            padding: 6px 12px;
+            background-color: white;
+            border: 1px solid #2980b9;
+            color: #2980b9;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .drag-instruction {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .image-container {
+            width: 100%;
+            height: calc(100% - 50px);
+            overflow-x: auto;
+            white-space: nowrap;
+            position: relative;
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .scroll-image {
+            height: auto;
+            max-height: 85vh;
+            width: auto;
+            object-fit: contain;
+            object-position: left;
+        }
+        
+        .image-container::-webkit-scrollbar {
+            height: 30px;
+        }
+        
+        .image-container::-webkit-scrollbar-track {
+            background: #f0f0f0;
+        }
+        
+        .image-container::-webkit-scrollbar-thumb {
+            background: #2980b9;
+            border-radius: 0;
+            border: 5px solid #f0f0f0;
+        }
+        
+        .image-container::-webkit-scrollbar-thumb:hover {
+            background: #1c608f;
+        }
+        
+        .image-container::-webkit-scrollbar-button {
+            display: none;
+        }
+        
+        .drag-hint {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            pointer-events: none;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .drag-hint.fade {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html" class="back-button">← 返回首页</a>
+            <span class="drag-instruction">左右拖动底部滑条</span>
+        </div>
+    </div>
+    
+    <div class="image-container" id="imageContainer">
+        <img src="images/papersenses_0 conv/papersenses_0 conv 1.png" alt="Papersenses Project" class="scroll-image" id="scrollImage">
+        <div class="drag-hint" id="dragHint">← 左右拖动查看 →</div>
+    </div>
+    
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('dragHint').classList.add('fade');
+            }, 2000);
+            
+            var img = document.getElementById('scrollImage');
+            var container = document.getElementById('imageContainer');
+            
+            img.onload = function() {
+                if (img.naturalWidth > container.clientWidth) {
+                    img.style.width = img.naturalWidth + 'px';
+                } else {
+                    img.style.width = container.clientWidth + 'px';
+                }
+            };
+        };
+    </script>
+</body>
+</html> 

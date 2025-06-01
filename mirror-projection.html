@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Infinite 360° FOV Tracking AR Projection Mirror Project</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+            background-color: white;
+            z-index: 10;
+            position: relative;
+        }
+        
+        .back-button {
+            padding: 6px 12px;
+            background-color: white;
+            border: 1px solid #2980b9;
+            color: #2980b9;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .content-container {
+            width: 100%;
+            height: calc(100% - 50px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }
+        
+        .content-image {
+            max-width: 90%;
+            max-height: 85vh;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <a href="index.html" class="back-button">← 返回首页</a>
+        </div>
+    </div>
+    
+    <div class="content-container">
+        <img src="images/mirror.gif" alt="Infinite 360° FOV Tracking AR Projection Mirror Project" class="content-image">
+    </div>
+</body>
+</html> 
