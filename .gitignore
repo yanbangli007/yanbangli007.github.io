@@ -1,0 +1,41 @@
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 编辑器临时文件
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# 开发环境生成的文件
+node_modules/
+.npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.yarn-integrity
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 构建输出
+/dist
+/build
+/out
+/.next
+/.nuxt
+
+# 缓存目录
+.cache/
+.parcel-cache/
+
+# 本地配置文件
+*.local
+config.local.js 
